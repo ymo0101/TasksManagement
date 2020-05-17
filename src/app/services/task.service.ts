@@ -6,9 +6,14 @@ import { Task } from '../models/task';
   providedIn: 'root'
 })
 export class TaskService {
-
+  apiURL ="http://localhost:5000/tasks";
   constructor(private http :HttpClient) { }
   findall(){
-    return this.http.get<Task[]>("http://localhost:5000/tasks");
+    return this.http.get<Task[]>(this.apiURL);
+  }
+
+  delete(id){
+
+    return this.http.delete(`http://localhost:5000/tasks/${id}`);
   }
 }
