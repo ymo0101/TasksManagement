@@ -13,16 +13,17 @@
     <div class="col-md-6 mx-auto">
         <div class="form-group">
             <label for="label">Label</label>
-            <input id ="label" type="text" class="form-control">
+            <input [(ngModel)]="myTask.label"  id ="label" type="text" class="form-control">
         </div>
 
         <div class="form-check my-2">
             <label class="form-check-label">
-                <input type="checkbox" class="form-check-input">
+                <input [(ngModel)]="myTask.completed"  type="checkbox" class="form-check-input">
                 Copmleted
             </label>
         </div>
-        <button class="btn btn-success btn-block">
+
+        <button (click)="persistTask()" class="btn btn-success btn-block">
             <i class="fa fa-send"></i>New Task
         </button>
     </div>
@@ -47,7 +48,7 @@
                         'fa-thumbs-down':!task.completed
                     }"class="fa"></i>
                 </span>
-                <button class="btn btn-sm btn-darl"><i class="fa fa-trash"></i></button>
+                <button (click)="deleteTask(task.id)" class="btn btn-sm btn-darl"><i class="fa fa-trash"></i></button>
             </li>
 
 

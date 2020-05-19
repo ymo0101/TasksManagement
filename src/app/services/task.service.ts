@@ -14,6 +14,10 @@ export class TaskService {
 
   delete(id){
 
-    return this.http.delete(`http://localhost:5000/tasks/${id}`);
+    return this.http.delete(`${this.apiURL}/${id}`);
+  }
+
+  persist(task){
+    return this.http.post<Task>(this.apiURL,task);
   }
 }
