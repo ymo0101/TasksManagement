@@ -20,4 +20,12 @@ export class TaskService {
   persist(task){
     return this.http.post<Task>(this.apiURL,task);
   }
+
+  completed(id, completed){
+    return this.http.patch(`${this.apiURL}/${id}`,{completed: !completed});
+  }
+
+  update(task){
+    return this.http.put(`${this.apiURL}/${task.id}`,task);
+  }
 }

@@ -6,11 +6,6 @@
       "completed": true
     },
     {
-      "label": "JAVA 8",
-      "completed": false,
-      "id": 3
-    },
-    {
       "label": "learn html5",
       "completed": false,
       "id": 5
@@ -19,6 +14,21 @@
       "label": "test",
       "completed": true,
       "id": 6
+    },
+    {
+      "label": "Java 8",
+      "completed": false,
+      "id": 7
+    },
+    {
+      "label": "Learn angualr8",
+      "completed": false,
+      "id": 8
+    },
+    {
+      "label": "Learn php",
+      "completed": false,
+      "id": 9
     }
   ]
 }
